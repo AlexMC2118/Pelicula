@@ -24,7 +24,7 @@ class Pelicula{
     this.narrador.hablar('Poco despues una sombra asomaba por el horizonte.');
     this.morgan.hablar('Vaya pueblo tan deprimente...');
     this.morgan.hablar('¡Eh tu! ¡¿Qué se supone que estas mirando?!');
-    this.narrador.hablar('Morgan apuntó con su pistola a aquel hombre.');
+    this.narrador.hablar('Morgan apuntó con su pistola a Paco.');
     this.morgan.hablar('¡Dame todo tu p*to dinero!');
     this.paco.hablar(`Cuidado ${(this.maria.nombre)}, cubrete.`);
     this.narrador.hablar('Maria se cubrió detras de Paco.');

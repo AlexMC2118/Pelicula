@@ -10,7 +10,21 @@
 }
 .narrador_hablar {
   font-family: monospace;
+  margin: 5px;
 }
 .disparo {
   color: red;
+}
+main {
+  width: 80%;
+  padding: 10px;
+  margin: 0 10% 0 10%;
+  border-left: 5px inset #FF9503;
+}
+h1{
+  padding: 20px;
+  background-color: #FFC076;
+}
+#subtitulo{
+  margin-bottom: 50px;
 }

@@ -1,0 +1,16 @@
+.personaje_hablar {
+  font-weight: bold;
+}
+.personaje_hablar_bueno {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  opacity: 0.6;
+}
+.personaje_hablar_malo {
+  font-family: Andale Mono, monospace;
+}
+.narrador_hablar {
+  font-family: monospace;
+}
+.disparo {
+  color: red;
+}

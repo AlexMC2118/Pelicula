@@ -26,22 +26,7 @@ class Pelicula{
     this.morgan.hablar('¡Eh tu! ¡¿Qué se supone que estas mirando?!');
     this.narrador.hablar('Morgan apuntó con su pistola a aque hombre.');
     this.morgan.hablar('¡Dame todo tu p*to dinero!');
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
-    this.morgan.disparar();
+    this.morgan.disparar(1);
   }
 }
 
@@ -66,27 +51,29 @@ class Personaje{
   hablar(mensaje){
     document.write(`<p class="personaje_hablar">${this.nombre}: ${mensaje}</p>`);
   }
-  disparar(){
-    console.log()
-    if(this.arma.balas>0){
-      document.write(`<p class="narrador_hablar disparo">- ~PUMM~  Disparó el arma -</p>`);
-      this.arma.balas--;
-    }
-    else {
-      document.write(`<p class="narrador_hablar disparo">- ~KRSSS~ Mi*rd* no tengo balas en la recamara-</p>`);
-      if(this.arma.cantidad>=7){
-        document.write(`<p class="narrador_hablar disparo">-Recargó 7 balas-</p>`);
-        this.arma.cantidad-=7;
-        this.arma.balas+=7;
+  disparar(disparos){
+    while(disparos>0){
+      if(this.arma.balas>0){
+        document.write(`<p class="narrador_hablar disparo">- ~PUMM~  Disparó el arma -</p>`);
+        this.arma.balas--;
       }
-      else if(this.arma.cantidad>0 && this.arma.cantidad<7){
-          document.write(`<p class="narrador_hablar disparo">-Recargó ${this.arma.cantidad} balas-</p>`);
-          this.arma.balas;
-          this.arma.cantidad-=this.arma.cantidad;
+      else {
+        document.write(`<p class="narrador_hablar disparo">- ~KRSSS~ Mi*rd* no tengo balas en la recamara-</p>`);
+        if(this.arma.cantidad>=7){
+          document.write(`<p class="narrador_hablar disparo">-Recargó 7 balas-</p>`);
+          this.arma.cantidad-=7;
+          this.arma.balas+=7;
+        }
+        else if(this.arma.cantidad>0 && this.arma.cantidad<7){
+            document.write(`<p class="narrador_hablar disparo">-Recargó ${this.arma.cantidad} balas-</p>`);
+            this.arma.balas+=this.arma.cantidad;
+            this.arma.cantidad-=this.arma.cantidad;
+        }
+        else if(this.arma.cantidad==0){
+          document.write(`<p class="narrador_hablar disparo">- Mi*rd* no me quedan balas-</p>`);
+        }
       }
-      else if(this.arma.cantidad==0){
-        document.write(`<p class="narrador_hablar disparo">- Mi*rd* no me quedan balas-</p>`);
-      }
+      disparos--;
     }
   }
 }
